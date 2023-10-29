@@ -19,7 +19,7 @@ _safe () {
 _ghdl () {
   local _work=${WORK:-work}
   local _dest=$GHDL_INSTALL_DEST
-  local _opts="-a --std=${STD:-1993} --work=$_work --workdir=$_dest "
+  local _opts="-a --std=${STD:-1993} --work=$_work --workdir=$_dest -P$_dest --ieee=synopsys -frelaxed-rules -fexplicit"
   [ -d $_dest ] || _safe mkdir -p $_dest
   _safe ${GHDL:-ghdl} $_opts  $*
 }
