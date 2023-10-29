@@ -37,7 +37,7 @@ src=$XILINX_VIVADO/data/vhdl/src
 GLOBAL_OPTS="-M 64m"
 A_OPTS="--relaxed"
 
-for STD in 1993 2008; do
+for STD in 93 08; do
   analyse_list unisim$(std_suffix $STD) <<EOF
 $src/unisims/unisim_VPKG.vhd
 $src/unisims/unisim_retarget_VCOMP.vhd
