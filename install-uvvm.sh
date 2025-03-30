@@ -8,12 +8,12 @@
 . $(dirname $BASH_SOURCE)/functions.sh
 
 if [ -z "$1" ]; then
-  branch="v2023.03.21"
+  branch="v2024.07.04"
 fi
 
 git_wrapper https://github.com/UVVM/UVVM $branch
 
-STD=2008
+STD=08
 A_OPTS="--relaxed"
 
 component_list=$(tr -d '\r' <script/component_list.txt | tr '\n' ' ')
