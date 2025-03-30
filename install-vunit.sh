@@ -14,6 +14,35 @@ fi
 git_wrapper https://github.com/VUnit/vunit $tag
 
 for STD in 08; do
+  analyse_list osvvm$(std_suffix $STD) <<EOF
+vunit/vhdl/osvvm/VendorCovApiPkg.vhd
+vunit/vhdl/osvvm/TranscriptPkg.vhd
+vunit/vhdl/osvvm/TextUtilPkg.vhd
+vunit/vhdl/osvvm/ResolutionPkg.vhd
+vunit/vhdl/osvvm/NameStorePkg.vhd
+vunit/vhdl/osvvm/NamePkg.vhd
+vunit/vhdl/osvvm/OsvvmGlobalPkg.vhd
+vunit/vhdl/osvvm/MessageListPkg.vhd
+vunit/vhdl/osvvm/AlertLogPkg.vhd
+vunit/vhdl/osvvm/TbUtilPkg.vhd
+vunit/vhdl/osvvm/SortListPkg_int.vhd
+vunit/vhdl/osvvm/ScoreboardGenericPkg.vhd
+vunit/vhdl/osvvm/ScoreboardPkg_slv.vhd
+vunit/vhdl/osvvm/ScoreboardPkg_int.vhd
+vunit/vhdl/osvvm/ResizePkg.vhd
+vunit/vhdl/osvvm/RandomBasePkg.vhd
+vunit/vhdl/osvvm/RandomProcedurePkg.vhd
+vunit/vhdl/osvvm/RandomPkg.vhd
+vunit/vhdl/osvvm/MessagePkg.vhd
+vunit/vhdl/osvvm/MemoryPkg.vhd
+vunit/vhdl/osvvm/CoveragePkg.vhd
+vunit/vhdl/osvvm/ReportPkg.vhd
+vunit/vhdl/osvvm/OsvvmContext.vhd
+EOF
+done
+
+
+for STD in 08; do
   analyse_list vunit_lib$(std_suffix $STD) <<EOF
 vunit/vhdl/verification_components/src/axi_pkg.vhd
 vunit/vhdl/string_ops/src/string_ops.vhd
