@@ -8,12 +8,12 @@
 . $(dirname $BASH_SOURCE)/functions.sh
 
 if [ -z "$1" ]; then
-    tag="v4.6.2"
+    tag="v4.7.0"
 fi
 
 git_wrapper https://github.com/VUnit/vunit $tag
 
-for STD in 2008; do
+for STD in 08; do
   analyse_list vunit_lib$(std_suffix $STD) <<EOF
 vunit/vhdl/data_types/src/types.vhd
 vunit/vhdl/data_types/src/api/external_string_pkg.vhd
